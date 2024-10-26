@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela e Gráficos de Lucros Interativos</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>  
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <h1>Tabela e Gráficos de Lucros Interativos</h1>
+
+    <!-- Tabela de lucros -->
+    <table id="profitTable">
+        <thead>
+            <tr>
+                <th>Mês</th>
+                <th>Receita (R$)</th>
+                <th>Despesas (R$)</th>
+                <th>Lucro (R$)</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Janeiro</td>
+                <td>20000</td>
+                <td>15000</td>
+                <td>5000</td>
+                <td><button class="deleteRow">Excluir</button></td>
+            </tr>
+            <tr>
+                <td>Fevereiro</td>
+                <td>22000</td>
+                <td>17000</td>
+                <td>5000</td>
+                <td><button class="deleteRow">Excluir</button></td>
+            </tr>
+            <tr>
+                <td>Março</td>
+                <td>25000</td>
+                <td>20000</td>
+                <td>5000</td>
+                <td><button class="deleteRow">Excluir</button></td>
+            </tr>
+            <tr>
+                <td>Abril</td>
+                <td>30000</td>
+                <td>25000</td>
+                <td>5000</td>
+                <td><button class="deleteRow">Excluir</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Formulário para adicionar nova linha -->
+    <div class="form-container">
+        <input type="text" id="newMonth" placeholder="Mês">
+        <input type="number" id="newRevenue" placeholder="Receita (R$)">
+        <input type="number" id="newExpenses" placeholder="Despesas (R$)">
+        <button id="addRow">Adicionar Linha</button>
+    </div>
+
+    <!-- Container para os gráficos -->
+    <div class="charts-wrapper">
+        <div class="chart-container">
+            <canvas id="barChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="pieChart"></canvas>
+        </div>
+    </div>
+
+    <script src="javascript.js"></script>
+</body>
+</html>

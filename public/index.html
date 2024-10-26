@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Gerenciamento de Produtos</h1>
+
+    <!-- Formulário para cadastrar produto -->
+    <form id="form-produto">
+        <label for="nomeProduto">Nome do Produto:</label>
+        <input type="text" id="nomeProduto" name="nomeProduto" required>
+
+        <label for="valorProduto">Valor do Produto:</label>
+        <input type="number" id="valorProduto" name="valorProduto" step="0.01" required>
+
+        <label for="vencimentoProduto">Data de Vencimento:</label>
+        <input type="date" id="vencimentoProduto" name="vencimentoProduto">
+
+        <label for="quantidadeProduto">Quantidade:</label>
+        <input type="number" id="quantidadeProduto" name="quantidadeProduto" min="1" required>
+
+        <button type="submit">Cadastrar Produto</button>
+    </form>
+
+    <!-- Tabela para listar produtos -->
+    <table id="product-table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Valor</th>
+                <th>Data de Vencimento</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Os produtos serão listados aqui via JavaScript -->
+        </tbody>
+    </table>
+
+    <div id="total-valor">Valor Total: R$ 0.00</div>
+
+    <!-- Modal de Edição (inicialmente oculto) -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Editar Produto</h2>
+            <form id="form-editar-produto">
+                <label for="editarNomeProduto">Nome do Produto:</label>
+                <input type="text" id="editarNomeProduto" name="editarNomeProduto" required>
+
+                <label for="editarValorProduto">Valor do Produto:</label>
+                <input type="number" id="editarValorProduto" name="editarValorProduto" step="0.01" required>
+
+                <label for="editarVencimentoProduto">Data de Vencimento:</label>
+                <input type="date" id="editarVencimentoProduto" name="editarVencimentoProduto">
+
+                <label for="editarQuantidadeProduto">Quantidade:</label>
+                <input type="number" id="editarQuantidadeProduto" name="editarQuantidadeProduto" min="1" required>
+
+                <button type="submit">Salvar Alterações</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
